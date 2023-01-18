@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<title>Data Call on page load</title>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+li.dropdown  ul{
+  display: block;
+}
+li.dropdown ul li{
+  display: block;
+  float: none;
+  background-color: #fff;
+  border-top:1px solid #ccc;
+  padding: 5px;
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#loader{
+    display: none;
+}
+</style>
+</head>
+<body>
+    
+<ul class="dd_nav">
+  <li><a href="#home">Home</a></li>
+  <li class="dropdown">
+    <a  href="#" data-html-ank="about.html" class="dropbtn">About </a>
+    <div class="dropdown-content" include-html="about.html">
+       <!-- call data on azax -->
+       <div id='loader'  >
+          <img src='loader.gif' width='32px' height='32px'>
+          Loader
+        </div>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="#" data-html-ank="services.html" class="dropbtn">Services</a>
+    <div class="dropdown-content"  include-html="services.html">
+       <!-- call data on azax -->
+       <div id='loader'  ß>
+          <img src='loader.gif' width='32px' height='32px'>
+          Loader
+        </div>
+    </div>
+  </li>
+</ul>
+
+<h3>DATA Call on page load in drop down</h3>
+<p>Page Load DATA :- 2 second delay </p>
+
+</body>
+<script src="jquery-3.6.1.min.js"></script>
+<script src="cust_js.js"></script>
+</html>
+
+
