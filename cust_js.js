@@ -1,7 +1,7 @@
 
 (function(){
-        setTimeout(function(){ // set time out it is optional 
-              $(".dd_nav a").each(function(index, elem) {
+       // setTimeout(function(){ // set time out it is optional 
+              $(".dd_nav a").each((index, elem) =>{
                      var file_name = $(elem).attr("data-html-ank");
 
                      jQuery.ajax({
@@ -23,5 +23,5 @@
                             }
                      });
               });
-      }, 2000);  
+     // }, 2000);
 })();
